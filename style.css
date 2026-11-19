@@ -3,10 +3,6 @@
   color-scheme: light;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   box-sizing: border-box;
 }
