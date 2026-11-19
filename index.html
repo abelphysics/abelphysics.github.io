@@ -4,54 +4,137 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="Abel’s compendium of resources on topics in theoretical physics.">
-  <title>About | Abel</title>
+  <meta name="description" content="Abel Shiferaw's webpage: a compendium of theoretical physics resources.">
+  <title>Abel Shiferaw's webpage</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    body {
+      margin: 8px;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.2;
+    }
+
+    a {
+      color: #0000ee;
+      text-decoration: underline;
+      overflow-wrap: anywhere;
+    }
+
+    a:visited {
+      color: #551a8b;
+    }
+
+    a:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 600px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .photo-placeholder {
+      box-sizing: border-box;
+      width: 600px;
+      max-width: 100%;
+      aspect-ratio: 3 / 2;
+      display: grid;
+      place-items: center;
+      border: 1px solid #cccccc;
+      color: #666666;
+    }
+
+    .resources > li {
+      margin-bottom: 16px;
+    }
+
+    .resources ul {
+      margin-top: 6px;
+    }
+
+    .resources ul li {
+      margin-bottom: 6px;
+    }
+  </style>
 </head>
+
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main>
+    <h1>Abel Shiferaw's webpage</h1>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="site-name" href="index.html">Abel</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">About</a>
-        <a href="resources/index.html">Resources</a>
-      </nav>
-    </div>
-  </header>
+    <!-- PHOTO: Replace the next div with the img line below when your photo is ready. -->
+    <!-- <img class="profile-photo" src="profile.jpg" alt="Abel Shiferaw"> -->
+    <div class="photo-placeholder" role="img" aria-label="Space reserved for a photo of Abel Shiferaw">Photo to be added</div>
 
-  <div class="page-layout">
-    <aside class="sidebar" aria-label="About the author and resource topics">
-      <p class="author-name">Abel</p>
-      <p class="author-description">Physics graduate student</p>
-      <p class="collection-description">A personal collection of theoretical physics resources.</p>
+    <p>
+      Welcome! I am a physics graduate student at UC Berkeley. The site serves as a compendium of resources for various topics I find interesting in theoretical physics.
+    </p>
 
-      <nav class="topic-nav" aria-label="Physics resources">
-        <p class="sidebar-heading"><a href="resources/physics-resources/index.html">Physics Resources</a></p>
+    <h2>Resources</h2>
+
+    <ul class="resources">
+      <li>
+        <strong>General relativity:</strong>
         <ul>
-          <li><a href="resources/physics-resources/general-relativity/index.html">General Relativity</a></li>
-          <li><a href="resources/physics-resources/quantum-field-theory/index.html">Quantum Field Theory</a></li>
-          <li><a href="resources/physics-resources/quantum-gravity/index.html">Quantum Gravity</a></li>
+          <li>
+            David Tong |
+            <a href="https://davidtong.org/teaching/general-relativity/">https://davidtong.org/teaching/general-relativity/</a>
+          </li>
+          <li>
+            Daniel Baumann |
+            <a href="https://cdn.prod.website-files.com/65c089cfdfce11a0392e5c42/67469a196f855821380fffa4_GR-2024.pdf">https://cdn.prod.website-files.com/65c089cfdfce11a0392e5c42/67469a196f855821380fffa4_GR-2024.pdf</a>
+          </li>
         </ul>
-      </nav>
-    </aside>
+      </li>
 
-    <main class="page-content" id="main-content" tabindex="-1">
-      <h1>About</h1>
-      <p class="intro">A compendium of resources on topics I find interesting in theoretical physics.</p>
+      <li>
+        <strong>Quantum Field Theory:</strong>
+        <ul>
+          <li>
+            Daniel Baumann |
+            <a href="https://assets-global.website-files.com/65c089cfdfce11a0392e5c42/65f3ecae4a51910f44155a81_QFT-2019.pdf">https://assets-global.website-files.com/65c089cfdfce11a0392e5c42/65f3ecae4a51910f44155a81_QFT-2019.pdf</a>
+          </li>
+          <li>
+            Hong Liu:
+            <a href="https://ocw.mit.edu/courses/8-323-relativistic-quantum-field-theory-i-spring-2023/">https://ocw.mit.edu/courses/8-323-relativistic-quantum-field-theory-i-spring-2023/</a>
+          </li>
+          <li>
+            Daniel Harlow:
+            <a href="https://www.mit.edu/~harlow/HarlowQFT1.pdf">https://www.mit.edu/~harlow/HarlowQFT1.pdf</a>
+          </li>
+        </ul>
+      </li>
 
-      <!-- Edit these paragraphs to update your About page. -->
-      <p>I am Abel, a physics graduate student. I use this website to collect lecture notes, papers, and other resources that I would like to study and return to.</p>
-      <p>The collection is organized into General Relativity, Quantum Field Theory, and Quantum Gravity. Each topic has its own page, with links to the original resources.</p>
-
-      <p class="browse-link"><a href="resources/physics-resources/index.html">Browse Physics Resources</a></p>
-    </main>
-  </div>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 Abel</p>
-  </footer>
+      <li>
+        <strong>Quantum Gravity, and Black Holes:</strong>
+        <ul>
+          <li>
+            Thomas Hartman |
+            <a href="http://www.hartmanhep.net/topics2015/">http://www.hartmanhep.net/topics2015/</a>
+          </li>
+          <li>
+            Daniel Harlow |
+            <a href="https://arxiv.org/abs/1409.1231">https://arxiv.org/abs/1409.1231</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </main>
 </body>
 </html>

@@ -1,152 +1,87 @@
-# Abel's physics resources website
+# Abel Shiferaw's webpage
 
-A plain HTML and CSS website for GitHub Pages. The page background is white. The top navigation has exactly two sections: **About** and **Resources**. About is the homepage.
+This version is a single-page website inspired by the plain academic format of Daniel Harlow's webpage: https://www.mit.edu/~harlow/
 
-## Website organization
+Everything is in `index.html`, including the small CSS style block. The page has a white background, black serif text, conventional blue links, and nested resource lists.
 
-The Resources section contains a **Physics Resources** folder with three topic folders: **General Relativity**, **Quantum Field Theory**, and **Quantum Gravity**. Each folder contains an `index.html` file, which is that folder's page.
+The page follows this order:
 
-| File | What it controls |
-| --- | --- |
-| `index.html` | Your About page and homepage. |
-| `style.css` | The appearance of every page. |
-| `resources/index.html` | The Resources page, linking to Physics Resources. |
-| `resources/physics-resources/index.html` | The Physics Resources page, linking to the three topics. |
-| `resources/physics-resources/general-relativity/index.html` | General Relativity resources. |
-| `resources/physics-resources/quantum-field-theory/index.html` | Quantum Field Theory resources. |
-| `resources/physics-resources/quantum-gravity/index.html` | Quantum Gravity resources. |
+1. Abel Shiferaw's webpage.
+2. A temporary place for your photograph.
+3. Your exact welcome paragraph.
+4. Resources: General relativity; Quantum Field Theory; Quantum Gravity, and Black Holes.
 
-Folder names use lowercase letters and hyphens. Visitors see readable titles such as “Physics Resources.”
+All seven resource URLs are retained exactly as supplied. Only the photo is still to be added.
 
-## 1. Preview the website on your computer
+## Preview
 
 1. Extract `physics-website.zip`.
-2. Open the extracted folder.
-3. Double-click the top-level `index.html` file to open it in your browser.
-4. Click Resources, then Physics Resources, then General Relativity.
+2. Open its `index.html` file in a browser.
 
-All internal links include `index.html` explicitly, so this local preview does not need a development server or an internet connection. The link to David Tong's course does need internet access.
+You can preview the page locally. Following the resource links requires internet access.
 
-## 2. Upload to GitHub
+## Update your GitHub website
 
-These instructions assume you are using the website repository from the earlier tutorial, typically `yourusername.github.io`.
+1. Open the GitHub repository used for your website.
+2. Stay on the branch used by GitHub Pages, usually `main`.
+3. Choose **Add file → Upload files**.
+4. Upload the extracted `index.html` directly to the repository's top level, replacing the previous homepage.
+5. Commit the change with a message such as `Switch to a single-page physics resource website`.
+6. Keep **Settings → Pages → Deploy from a branch → main → /(root)**, using your actual publishing branch if it has another name.
+7. Wait for deployment and refresh the published page. GitHub says changes can take up to 10 minutes to publish.
 
-1. Open that repository on GitHub.
-2. Make sure you are on the branch used by GitHub Pages, usually `main`.
-3. Click **Add file → Upload files**.
-4. Open the extracted folder on your computer and drag its contents into the upload area: `index.html`, `style.css`, the entire `resources` folder, and optionally this `README.md`.
-5. Check that the top-level `index.html` is directly in the repository, alongside `style.css`. Upload the contents, not another enclosing folder and not the ZIP archive itself.
-6. Use a commit message such as `Organize theoretical physics resources` and commit directly to the publishing branch.
+Upload the HTML file itself, not the ZIP archive or an enclosing folder. You may also replace your repository's README with this one, but the README is not needed to render the website.
 
-The new `index.html` and `style.css` replace the earlier tutorial versions if they already exist. The resources folder adds the new pages. If you have customized those two files, retain a copy first so you can bring your text across.
+The new homepage contains all your resources. It does not load the old `style.css` or link to the previous `resources` folder. GitHub does not automatically remove old repository files when you upload the new homepage; the previous topic pages remain accessible at their old addresses until you delete them. Once you have switched, you can delete that obsolete stylesheet and the old topic pages from the repository if you want the published site to contain only this new page. Commit those deletions as well.
 
-GitHub's upload documentation:
-https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
-
-## 3. Publish using GitHub Pages
-
-In the repository, open **Settings → Pages** and use:
-
-| Setting | Value |
-| --- | --- |
-| Source | Deploy from a branch |
-| Branch | `main`, or the branch containing your uploaded files |
-| Folder | `/(root)` |
-
-Click **Save** if you changed the settings. If Pages was already configured this way, committing the files starts an update.
-
-GitHub says updates may take up to 10 minutes. Use **Visit site** from Pages settings to find the correct public address. You can check the deployment in the **Actions** tab.
-
-Official guidance:
+Official GitHub instructions:
+- https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
 - https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 - https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
-The links in this website are relative. The same files therefore work at a personal site address such as `yourusername.github.io` or a project site address such as `yourusername.github.io/site/` without editing a username or base URL.
+## Add your picture
 
-## 4. Edit your About page
+You can send your picture in the conversation to have it fitted into the page, or add it yourself:
 
-Open the top-level `index.html` in GitHub and click the pencil icon. Edit the paragraphs inside the main content, then commit the change.
-
-The starter identifies you only as Abel, a physics graduate student. You can add your preferred full name, academic background, and interests. The author name and navigation are repeated in each HTML page; if you change those shared elements, update all six HTML files. The stylesheet is already shared, so style changes need only one edit.
-
-## 5. Add another resource
-
-Open the topic page you want to change. For example:
-
-`resources/physics-resources/general-relativity/index.html`
-
-Find this list:
+1. Upload a JPEG named `profile.jpg` to the same repository folder as `index.html`. If the picture is a PNG, keep the `.png` extension and use that exact filename in the next step. Changing a filename extension does not convert the image format.
+2. Edit `index.html` and find this temporary placeholder:
 
 ```html
-<ul class="resource-list">
-  <li>
-    General relativity by David Tong |
-    <a href="https://davidtong.org/teaching/general-relativity/">https://davidtong.org/teaching/general-relativity/</a>
-  </li>
-</ul>
+<div class="photo-placeholder" role="img" aria-label="Space reserved for a photo of Abel Shiferaw">Photo to be added</div>
 ```
 
-Add a new `<li>...</li>` block immediately before the closing `</ul>`:
+3. Replace that entire div with:
+
+```html
+<img class="profile-photo" src="profile.jpg" alt="Abel Shiferaw">
+```
+
+4. Commit the change.
+
+The picture appears directly under your title. Its displayed width is limited to 600 pixels, and it shrinks to fit narrow screens. Its original aspect ratio is preserved. Change `width: 600px` in `.profile-photo` if you want a smaller picture.
+
+The commented example in the HTML is for guidance; an HTML comment between `<!--` and `-->` is not displayed.
+
+## Add another resource
+
+Edit `index.html` in GitHub. Find the nested `<ul>` under the desired subject, and add a new entry before that nested list's closing `</ul>`:
 
 ```html
 <li>
-  Resource title by Author Name |
-  <a href="https://example.com/resource/">Course website</a>
+  Author Name |
+  <a href="https://example.com/resource/">https://example.com/resource/</a>
 </li>
 ```
 
-Replace the example title, author, and address with the resource you actually want to add. The `href` value is the destination. The text between `<a>` and `</a>` is what visitors click; it can be the full URL or a shorter label such as “Lecture notes.”
+Replace the example author and URL with your actual resource. The address inside `href` is the link destination; the text between `<a>` and `</a>` is what visitors see. Commit the change.
 
-Do not paste Markdown link syntax into an HTML list. Use the `<a href="...">...</a>` form above.
+## Change the appearance
 
-For the Quantum Field Theory and Quantum Gravity pages, replace this placeholder:
+The `<style>` block near the top of `index.html` controls the whole page:
 
-```html
-<li class="empty-state">Resources will be added here.</li>
-```
+- `background-color: #ffffff` keeps the page white.
+- `color: #000000` makes the body text black.
+- `font-family: "Times New Roman", Times, serif` selects a traditional serif font.
+- `overflow-wrap: anywhere` allows long resource URLs to wrap on smaller screens.
 
-with your first real resource. Commit the file. You do not need to edit `style.css` when adding resources to an existing topic.
-
-## 6. Keep the page white
-
-The shared stylesheet contains:
-
-```css
-html,
-body {
-  margin: 0;
-  background-color: #ffffff;
-}
-```
-
-`#ffffff` is white. The header and footer also use white, and the site requests a light color scheme. The design has dark text, teal links, and thin gray dividers.
-
-## 7. Create folders directly in GitHub if you prefer
-
-GitHub can create nested folders when you type a path in **Add file → Create new file**. For example, entering:
-
-`resources/physics-resources/general-relativity/index.html`
-
-creates the required directories as part of saving the file. Paste the corresponding complete HTML file from this download and commit it. Repeat for the other files listed above. Uploading the extracted folder is usually faster for the first setup.
-
-Official guidance:
-https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files
-
-## Troubleshooting
-
-| Problem | Check |
-| --- | --- |
-| Homepage gives a 404 | Pages is enabled; `index.html` is at the top level of the publishing folder; deployment has finished. |
-| Homepage works but nested pages fail | The entire `resources` folder was uploaded with its subfolders. |
-| Styling is missing | The root `style.css` exists and the relative stylesheet paths have not been changed. |
-| A new resource is missing | You edited the correct topic's file, committed to the publishing branch, and waited for the deployment. |
-| A link gives a 404 | Check the exact URL, filename, capitalization, and extension. |
-
-## Design reference and first resource
-
-The layout takes inspiration from the academic reading layout of Gabriele Di Ubaldo's website. This starter is an independent HTML/CSS implementation. Its own About text and CSS are original; it does not copy that site's biography, images, or resource descriptions.
-
-- Design reference: https://philosophysics.github.io/site//
-- First resource: https://davidtong.org/teaching/general-relativity/
-
-No framework, JavaScript, package installation, or build step is needed for these files.
+This version does not require a separate stylesheet, a framework, JavaScript, or a build step.
